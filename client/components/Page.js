@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { ThemeProvider, createGlobalStyle  } from 'styled-components';
-// import Header from './Header';
+import Header from './Header';
 import Meta from './Meta';
 
 // Global css variables
@@ -71,7 +71,7 @@ class Page extends Component {
         <StyledPage>
           <Meta />
           <GlobalStyle />
-          {/* <Header /> */}
+          <Header />
           <Inner>
             {this.props.children}
           </Inner>

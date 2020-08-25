@@ -27,16 +27,18 @@
     justify-content: center;
     transition: transform 0.2s;
     border-bottom: 5px solid transparent;
-    svg {
+    img {
       width: 40px;
       transition: all 0.2s;
-      fill: white;
       margin-bottom: 1rem;
+      &.invert {
+        filter: invert(1);
+      }
     }
     &:hover, &--active {
       border-bottom-color: rgba(0,0,0,0.2);
       border-right-color: rgba(0,0,0,0.05);
-      svg {
+      img {
         transform: scale(1.2)
       }
       background: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, $yellow 85%, #48ded4 95%) fixed;
@@ -44,11 +46,11 @@
     }
     &--logo {
       &:hover {
-        svg {
+        img {
           transform: none;
         }
       }
-      svg {
+      img {
         width: 200px;
         margin: 0;
       }
@@ -62,11 +64,11 @@
     &__link {
       padding-left: 1rem;
       padding-right: 1rem;
-      svg {
+      img {
         width: 30px;
       }
       &--logo {
-        svg {
+        img {
           width: 100px;
         }
       }
@@ -99,7 +101,7 @@
           min-width: 20px;
           height: 20px;
         }
-        svg {
+        img {
           display: none;
         }
       }
@@ -109,12 +111,12 @@
     }
     &__link {
       width: 100%;
-      svg {
+      img {
         // width: 5px;
         max-width: 100%;
       }
       &--logo {
-        svg {
+        img {
           width:100%;
         }
       }
