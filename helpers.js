@@ -1,4 +1,4 @@
-// /****************** START OLD STUFF ****************************/
+// /****************** START OLD STUFF For testing pug files ****************************/
 
 // /*
 //   This is a file of data and helper functions that we can expose and use in our templating function
