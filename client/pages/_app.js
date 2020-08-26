@@ -1,4 +1,4 @@
-import App, { Container } from 'next/app';
+import App from 'next/app';
 import Page from '../components/Page';
 import '../public/sass/style.scss';
 
@@ -16,11 +16,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
-          <Page>
-            <Component { ...pageProps }/>
-          </Page>
-      </Container>
+      <Page>
+        <Component { ...pageProps }/>
+      </Page>
     );
   }
 }
