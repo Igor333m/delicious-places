@@ -37,8 +37,8 @@ const Inner = styled.div`
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2')
+    font-family: 'panama-bold-webfont';
+    src: url('/fonts/panama-bold-webfont.woff2')
     format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -55,13 +55,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'radnika_next';
+    font-family: 'panama-bold-webfont';
   }
   a {
     text-decoration: none;
     color: ${theme.black};
   }
-  button {  font-family: 'radnika_next'; }
+  button {  font-family: 'panama-bold-webfont'; }
 `;
 
 class Page extends Component {

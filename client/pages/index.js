@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-export default () => (
+function index() {
+  return (
   <div>
-    <Title>My First Next.js Page</Title>
-    <button className='button' >Press Me</button>
+    <Title>Index Page</Title>
   </div>
-);
+  )
+};
+
+export default index;
 
 const Title = styled.h1`
   color: red;

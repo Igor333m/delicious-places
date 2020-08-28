@@ -6,6 +6,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const cors = require('cors');
 const promisify = require('es6-promisify');
 const flash = require('connect-flash');
 const expressValidator = require('express-validator');
@@ -26,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Takes the raw requests and turns them into usable properties on req.body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
 
 // Exposes a bunch of methods for validating data. Used heavily on userController.validateRegister
 app.use(expressValidator());

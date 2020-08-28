@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import { menu } from '../../helpers';
 let logo = require('svg-url-loader!../public/images/icons/logo.svg');
 
 function Header (props) {
 
-  console.log("header props: ", props);
+  // TODO Implemet user 
   const user = props.user;
 
   return (
@@ -12,21 +13,25 @@ function Header (props) {
       <nav className='nav'>
         <ul className='nav__section nav__section--pages'>
           <li className='nav__item'>
-            <a href='/' className='nav__link nav__link--logo'><img src={logo} alt="That's Delicious Logo" /></a>
+            <Link href='/' >
+              <a className='nav__link nav__link--logo'><img src={logo} alt="That's Delicious Logo" /></a>
+            </Link>
           </li>
           { menu.map( item => (
           <li className='nav__item' key={item.title}>
-            <a href='' className='nav__link' href={item.slug}>
-            <img className='invert' src={require(`svg-url-loader!../public/images/icons/${item.icon}.svg`)} alt={item.alt} />
-              <span>{item.title}</span>
-            </a>
+            <Link href={item.slug}>
+              <a className='nav__link'>
+                <img className='invert' src={require(`svg-url-loader!../public/images/icons/${item.icon}.svg`)} alt={item.alt} />
+                <span>{item.title}</span>
+              </a>
+            </Link>
           </li>
           )) }
         </ul>
         <div className='nav__section nav__section--search'>
-          <div class='search'>
-            <input class='search__input' type='text' placeholder='Coffee, beer...' name='search' />
-            <div class='search__results'></div>
+          <div className='search'>
+            <input className='search__input' type='text' placeholder='Coffee, beer...' name='search' />
+            <div className='search__results'></div>
           </div>
         </div>
         <div className='nav__section nav__section--user'>
